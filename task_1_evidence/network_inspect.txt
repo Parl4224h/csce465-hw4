@@ -1,0 +1,70 @@
+[
+    {
+        "Name": "hw4_hw4net",
+        "Id": "1230809a308d7bff001173e101f0f5176f9f5949651e383edb40fcd79afa4cc4",
+        "Created": "2026-11-22T12:37:29.593191437-06:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.30.0.0/24",
+                    "Gateway": "172.30.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {
+            "com.docker.network.bridge.name": "br-hw4"
+        },
+        "Labels": {
+            "com.docker.compose.config-hash": "e580e00a8df4afa6daed1a5508d627bc60f2e78f7238f1a029114a04b5c41e3f",
+            "com.docker.compose.network": "hw4net",
+            "com.docker.compose.project": "hw4",
+            "com.docker.compose.version": "5.8.0"
+        },
+        "Containers": {
+            "0f8179edcc99332631730ee2a7f0e54fa98ded01e11ba06d3e197f69db571533": {
+                "Name": "hw4-agent-node-1",
+                "EndpointID": "af39c5e2ff2ace0306ac7c0e3b0f37395ff7877422b081caa385f044c69c8e9a",
+                "MacAddress": "16:93:8a:8a:52:2c",
+                "IPv4Address": "172.30.0.10/24",
+                "IPv6Address": ""
+            },
+            "dec0ad5686a59cab7289e284f59130eb2aa934572d1cd59f06c0b1379be63c9b": {
+                "Name": "hw4-web-lab-1",
+                "EndpointID": "ed882d4c8a083ae6b3229a92478395467690503df3005fa8139b5535e1dd1a1e",
+                "MacAddress": "06:3c:05:49:b6:bf",
+                "IPv4Address": "172.30.0.40/24",
+                "IPv6Address": ""
+            },
+            "f4fdd6b79de04eca6b3392a38e1172b129f3a02f3aba21eabede55d4f08547f7": {
+                "Name": "hw4-mock-c2-1",
+                "EndpointID": "656df2c8c306c11708549d385ed103cacbca3704401dfed85c6b2823af03d155",
+                "MacAddress": "9a:1e:64:e4:15:ed",
+                "IPv4Address": "172.30.0.66/24",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.30.0.0/24": {
+                        "IPsInUse": 6,
+                        "DynamicIPsAvailable": 250
+                    }
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,4 @@
+NAME               IMAGE               COMMAND                  SERVICE      CREATED          STATUS          PORTS
+hw4-agent-node-1   csce465-hw4:local   "sleep infinity"         agent-node   54 seconds ago   Up 53 seconds   
+hw4-mock-c2-1      csce465-hw4:local   "python /app/c2.py"      mock-c2      54 seconds ago   Up 53 seconds   
+hw4-web-lab-1      csce465-hw4:local   "python -m http.serv…"   web-lab      54 seconds ago   Up 53 seconds   
