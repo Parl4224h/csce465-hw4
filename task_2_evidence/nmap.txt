@@ -1,0 +1,8 @@
+# Nmap 7.94SVN scan initiated Sun Nov 22 12:57:25 2026 as: nmap -sT -Pn -p 1-10000 -oN task2-nmap.txt 172.30.0.10
+Nmap scan report for 172.30.0.10
+Host is up (0.00010s latency).
+Not shown: 9999 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+9009/tcp open  pichat
+
+# Nmap done at Sun Nov 22 12:57:25 2026 -- 1 IP address (1 host up) scanned in 0.19 seconds

@@ -1,0 +1,23 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 1
+Node 0: 172.30.0.10:48038
+Node 1: 172.30.0.66:8080
+186
+POST / HTTP/1.1
+Host: 172.30.0.66:8080
+User-Agent: curl/8.14.1
+Accept: */*
+Content-Length: 36
+Content-Type: application/x-www-form-urlencoded
+
+CSCE465-FAKE-TOKEN-e4a8d030b2c85afe
+
+	101
+HTTP/1.0 204 No Content
+Server: BaseHTTP/0.6 Python/3.12.16
+Date: Sun, 22 Nov 2026 18:59:05 GMT
+
+
+===================================================================
