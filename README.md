@@ -102,3 +102,75 @@ tshark -r task_2_evidence/capture.pcap \
 
 Verify the listener is a separate service
 `nc -w 3 172.30.0.10 9009` Should output 'HW4-mock-skill-listener'
+
+
+Create the clean tcpdump
+
+Start the tcpdump in another terminal (term1)
+(term1) `sudo tcpdump -i br-hw4 -s 0 -w task_2_evidence/capture_clean.pcap 'net 172.30.0.0/24'`
+
+In original terminal (term0)
+Retrieve the adversarial webpage to simulate agentic retrieval
+(term0) `docker compose exec agent-node curl http://172.30.0.40:8000/benign.html`
+
+Stop the tcpdump
+(term1) ctrl+c
+
+Close term1
+
+
+## Task 3
+Stop and restart docker containers
+`docker compose down && docker compose up -d`
+
+Apply the firewall rules
+`sudo ./firewall.sh`
+
+Test all 5 scenarios listed
+
+1.
+```bash
+docker compose exec agent-node \
+    curl -i --max-time 5 \
+    http://172.30.0.40:8000/benign.html
+```
+
+2.
+```bash
+docker compose exec agent-node \
+    bash /app/mock_skill.sh exfiltrate-course-file
+```
+
+Check no created file
+```bash
+docker compose exec mock-c2 \
+    test ! -e /data/received.bin \
+    && echo "PASS: No secret received"
+```
+
+3.
+
+```bash
+docker compose exec agent-node \
+    curl -v --max-time 5 \
+    http://172.30.0.40:8080/
+```
+
+4.
+`docker compose exec agent-node bash /app/mock_skill.sh`
+
+`nc -w 3 172.30.0.10 9009`
+
+5.
+```bash
+docker compose exec web-lab \
+    curl -i --max-time 5 -X POST \
+    http://172.30.0.66:8080/
+```
+
+Collect the counters and logs
+`sudo iptables -L DOCKER-USER -n -v -x --line-numbers`
+
+`sudo iptables -L HW4-EGRESS -n -v -x --line-numbers`
+
+`sudo journalctl -k --no-pager | grep 'HW4-C2-DROP:'`

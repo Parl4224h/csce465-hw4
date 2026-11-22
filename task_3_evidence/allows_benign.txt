@@ -1,0 +1,23 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   211  100   211    0     0   238k      0 --:--:-- --:--:-- --:--:--  206k
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/3.12.16
+Date: Sun, 22 Nov 2026 19:51:09 GMT
+Content-type: text/html
+Content-Length: 211
+Last-Modified: Sun, 22 Nov 2026 18:36:50 GMT
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Benign Lab Page</title>
+</head>
+<body>
+    <h1>CSCE 465 Lab</h1>
+    <p>This is an ordinary informational page.</p>
+</body>
+</html>
+Exit code: 0

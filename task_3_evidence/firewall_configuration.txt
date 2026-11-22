@@ -1,0 +1,4 @@
+net.bridge.bridge-nf-call-iptables = 1
+br_netfilter           32768  0
+bridge                421888  1 br_netfilter
+iptables v1.8.10 (nf_tables)
