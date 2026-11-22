@@ -1,0 +1,6 @@
+i: suricata: This is Suricata version 8.0.8 RELEASE running in USER mode
+W: detect: rule 1000003: SYN-only to port(s) 8080:8080 w/o direction specified, disabling for toclient direction
+W: mpm-hs-cache: Failed to create Hyperscan cache file, make sure the folder exist and is writable or adjust sgh-mpm-caching-path setting (/var/lib/suricata/cache/sgh/2a95f3df46a4388d8fddc6c1436381862230a3ce7797a054648af63c053cdd10_v2.hs)
+i: threads: Threads created -> RX: 1 W: 16 FM: 1 FR: 1   Engine started.
+i: suricata: Signal Received.  Stopping engine.
+i: pcap: read 1 file, 31 packets, 2763 bytes

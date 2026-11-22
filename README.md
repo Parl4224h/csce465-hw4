@@ -174,3 +174,17 @@ Collect the counters and logs
 `sudo iptables -L HW4-EGRESS -n -v -x --line-numbers`
 
 `sudo journalctl -k --no-pager | grep 'HW4-C2-DROP:'`
+
+
+## Task 4
+Check the rules and load them
+`suricata -T -S local.rules -l task_4_evidence`
+
+Run against malicious capture
+`suricata -k none -r task_2_evidence/capture.pcap -S local.rules -l malicious`
+
+Run against benign capture
+`suricata -k none -r task_2_evidence/capture_clean.pcap -S local.rules -l clean`
+
+
+Relevant logs from each run were extracted into task_4_evidence/*
